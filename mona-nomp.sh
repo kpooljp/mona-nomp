@@ -13,7 +13,7 @@ start)
   fi
   echo "${TIMESTAMP} : Starting mona-nomp"
   cd ${KNOMP_DIR}
-  /usr/local/bin/npm start > /var/log/k-nomp.log 2>&1 &
+  /usr/local/bin/node init.js > /var/log/mona-nomp.log 2>&1 &
   echo $! > ${PIDFILE}
 ;;
 
@@ -23,8 +23,6 @@ stop)
     exit 1
   fi
   PID=`cat ${PIDFILE}`
-  PID=`ps -h --ppid ${PID} | awk '{print $1}'`
-  PID=`ps -h --ppid ${PID} | awk '{print $1}'`
   RET=`kill ${PID}`
 
   echo "${TIMESTAMP} : Stopping mona-nomp"
