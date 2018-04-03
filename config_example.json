@@ -33,14 +33,14 @@
         "enabled": true,
         "host": "0.0.0.0",
         "port": 80,
-        "stratumHost": "cryppit.com",
+        "stratumHost": "mpool.jp",
         "stats": {
             "updateInterval": 60,
             "historicalRetention": 43200,
             "hashrateWindow": 300
         },
         "adminCenter": {
-            "enabled": true,
+            "enabled": false,
             "password": "password"
         }
     },
